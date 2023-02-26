@@ -32,6 +32,12 @@
 $ npm install
 ```
 
+# Docker Setup
+
+`docker compose up dev-db`
+`docker ps` (to check container running later)
+`docker logs [containerId]` (to check "database system is ready to accept connections" log)
+
 ## Running the app
 
 ```bash
