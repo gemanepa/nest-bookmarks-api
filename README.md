@@ -26,18 +26,24 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-# Docker Setup
-
-`docker compose up dev-db`
-`docker ps` (to check container running later)
-`docker logs [containerId]` (to check "database system is ready to accept connections" log)
-
 ## Installation
 
 ```bash
 $ npm install
 $ npm install @prisma/client
+$ npm run db:dev:up
 ```
+
+## Restart Prisma + DB
+
+```bash
+$ npm run db:dev:restart
+```
+
+# Docker Container Status Check
+
+`docker ps` (to check if container is running)
+`docker logs [containerId]` (to check "database system is ready to accept connections" log)
 
 ## Prisma Commands
 

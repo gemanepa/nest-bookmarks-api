@@ -48,10 +48,8 @@ export class AuthService {
       // return the saved user
       return user;
     } catch (error) {
-      if (error instanceof PrismaClientKnownRequestError) {
-        if (error.code === 'P2002') {
-          throw new ForbiddenException('Email already exists');
-        }
+      if (error.code === 'P2002') {
+        throw new ForbiddenException('Email already exists');
       }
       throw error;
     }
