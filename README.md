@@ -26,17 +26,27 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
-
-```bash
-$ npm install
-```
-
 # Docker Setup
 
 `docker compose up dev-db`
 `docker ps` (to check container running later)
 `docker logs [containerId]` (to check "database system is ready to accept connections" log)
+
+## Installation
+
+```bash
+$ npm install
+$ npm install @prisma/client
+```
+
+## Prisma Commands
+
+`npx prisma --help`
+`prisma studio` runs client UI
+`prisma generate` Generate artifacts (e.g. Prisma Client)
+`prisma migrate dev` Create migrations from your Prisma schema, apply them to the database, generate artifacts (e.g. Prisma Client)
+`prisma validate` Validate your Prisma schema
+`prisma format` Format your Prisma schema
 
 ## Running the app
 
@@ -49,6 +59,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# prisma interface
+$ npx prisma studio
 ```
 
 ## Test
@@ -64,16 +77,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Docs
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+https://www.prisma.io/docs/concepts/components/prisma-client
