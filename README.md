@@ -48,10 +48,15 @@ $ npm run db:dev:restart
 ## Prisma Commands
 
 `npx prisma --help`
+
 `prisma studio` runs client UI
+
 `prisma generate` Generate artifacts (e.g. Prisma Client)
+
 `prisma migrate dev` Create migrations from your Prisma schema, apply them to the database, generate artifacts (e.g. Prisma Client)
+
 `prisma validate` Validate your Prisma schema
+
 `prisma format` Format your Prisma schema
 
 ## Running the app
