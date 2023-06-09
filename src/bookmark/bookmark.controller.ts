@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Get,
   Param,
   ParseIntPipe,
   Patch,
@@ -16,6 +17,19 @@ import { CreateBookmarkDto, EditBookmarkDto } from './dto';
 @Controller('bookmark')
 export class BookmarkController {
   constructor(private bookmarkService: BookmarkService) {}
+
+  @Get()
+  getBookmarks(@GetUser('id') userId: number) {
+    return this.bookmarkService.getBookmarks(userId);
+  }
+
+  @Get(':id')
+  getBookmarkById(
+    @GetUser('id') userId: number,
+    @Param('id', ParseIntPipe) bookmarkId: number,
+  ) {
+    return this.bookmarkService.getBookmarkById(userId, bookmarkId);
+  }
 
   @Post()
   createBookmark(
